@@ -21,13 +21,13 @@ console.log(output1);
 
 // {22:1,23:2,24:1};
 
-const output2 = users.reduce(function (acc, curr) {
-    if (acc[curr.age]) {
-        acc[curr.age] = ++acc[curr.age];
+const output2 = users.reduce(function (max, curr) {
+    if (max[curr.age]) {
+        max[curr.age] = ++max[curr.age];
     } else {
-        acc[curr.age] = 1;
+        max[curr.age] = 1;
     }
-    return acc;
+    return max;
 }, {});
 
 console.log(output2);
